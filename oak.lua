@@ -76,3 +76,85 @@ minetest.register_node("mccontent:oak_sapling", {
 		return itemstack
 	end,
 })
+
+
+-- Oak Forest
+
+	minetest.register_biome({
+		name = "oak_forest",
+		node_top = "default:dirt_with_grass",
+		depth_top = 1,
+		node_filler = "default:dirt",
+		depth_filler = 3,
+		node_riverbed = "default:gravel",
+		depth_riverbed = 2,
+		node_dungeon = "default:cobble",
+		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_stair = "stairs:stair_cobble",
+		y_max = 31000,
+		y_min = 1,
+		heat_point = 58,
+		humidity_point = 72,
+	})
+
+	minetest.register_biome({
+		name = "oak_forest_shore",
+		node_top = "default:gravel",
+		depth_top = 1,
+		node_filler = "default:gravel",
+		depth_filler = 3,
+		node_riverbed = "default:gravel",
+		depth_riverbed = 2,
+		node_dungeon = "default:cobble",
+		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_stair = "stairs:stair_cobble",
+		y_max = 0,
+		y_min = -1,
+		heat_point = 58,
+		humidity_point = 72,
+	})
+
+	minetest.register_biome({
+		name = "oak_forest_ocean",
+		node_top = "default:sand",
+		depth_top = 1,
+		node_filler = "default:sand",
+		depth_filler = 3,
+		node_riverbed = "default:gravel",
+		depth_riverbed = 2,
+		node_cave_liquid = "default:water_source",
+		node_dungeon = "default:cobble",
+		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_stair = "stairs:stair_cobble",
+		vertical_blend = 1,
+		y_max = -2,
+		y_min = -255,
+		heat_point = 58,
+		humidity_point = 72,
+	})
+
+	minetest.register_biome({
+		name = "oak_forest_under",
+		node_cave_liquid = {"default:water_source", "default:lava_source"},
+		node_dungeon = "default:cobble",
+		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_stair = "stairs:stair_cobble",
+		y_max = -256,
+		y_min = -31000,
+		heat_point = 58,
+		humidity_point = 72,
+	})
+
+	minetest.register_decoration({
+		name = "mccontent:oak_tree",
+		deco_type = "schematic",
+		place_on = {"default:dirt_with_grass"},
+		sidelen = 80,
+		fill_ratio = 0.07,
+		biomes = {"oak_forest"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("default") .. "/schematics/emergent_oak.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})

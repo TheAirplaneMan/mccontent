@@ -1,3 +1,16 @@
+minetest.register_node("mccontent:oak_tree_with_resin", {
+	description = ("Oak Tree with Resin"),
+	tiles = {"mccontent_oak_tree_top.png^mccontent_resin_mineral.png", "mccontent_oak_tree_top.png^mccontent_resin_mineral.png",
+		"mccontent_oak_tree.png^mccontent_resin_mineral.png"},
+	drop = "mccontent:resin_lump",
+	paramtype2 = "facedir",
+	is_ground_content = false,
+	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
+	sounds = default.node_sound_wood_defaults(),
+
+	on_place = minetest.rotate_node
+})
+
 minetest.register_craftitem("mccontent:resin_lump", {
 	description = ("Resin Lump"),
 	inventory_image = "mccontent_resin_lump.png",

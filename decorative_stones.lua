@@ -1,3 +1,39 @@
+minetest.register_node("mccontent:stone_chiseled", {
+	description = ("Chiseled Stone"),
+	tiles = {"mccontent_stone_chiseled.png"},
+	groups = {cracky = 2, stone = 1},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("mccontent:desert_stone_chiseled", {
+	description = ("Chiseled Desert Stone"),
+	tiles = {"mccontent_desert_stone_chiseled.png"},
+	groups = {cracky = 2, stone = 1},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+	output = "mccontent:stone_chiseled 4",
+	recipe = {
+		{"", "default:stone", ""},
+		{"default:stone", "", "default:stone"},
+		{"", "default:stone", ""},
+	}
+})
+
+minetest.register_craft({
+	output = "mccontent:desert_stone_chiseled 4",
+	recipe = {
+		{"", "default:desert_stone", ""},
+		{"default:desert_stone", "", "default:desert_stone"},
+		{"", "default:desert_stone", ""},
+	}
+})
+
+
+
+
+
 minetest.register_node("mccontent:granite", {
 	description = ("Granite"),
 	tiles = {"mccontent_granite.png"},

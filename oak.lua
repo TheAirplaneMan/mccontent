@@ -154,7 +154,7 @@ minetest.register_node("mccontent:oak_sapling", {
 		biomes = {"oak_forest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/emergent_oak.mts",
+		schematic = minetest.get_modpath("mccontent") .. "/schematics/emergent_oak.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})

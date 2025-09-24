@@ -1,6 +1,6 @@
-minetest.register_craftitem("mccontent:blueberries_popped", {
-	description = ("Popped Blueberries"),
-	inventory_image = "mccontent_blueberries_popped.png",
+minetest.register_craftitem("mccontent:resin_lump", {
+	description = ("Resin Lump"),
+	inventory_image = "mccontent_resin_lump.png",
 })
 
 minetest.register_node("mccontent:resin_block", {

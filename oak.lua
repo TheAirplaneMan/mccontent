@@ -158,3 +158,23 @@ minetest.register_node("mccontent:oak_sapling", {
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
+
+
+
+minetest.register_craft({
+	output = "mccontent:oak_wood 4",
+	recipe = {
+		{"mccontent:oak_tree"},
+	}
+})
+
+if core.get_modpath("stairs") then
+
+	stairs.register_stair_and_slab("oak_wood", "mccontent:oak_wood",
+		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+		{"mccontent_oak_wood.png"},
+		("Oak Wood Stair"),
+		("Oak Wood Slab"),
+		default.node_sound_wood_defaults())
+
+end

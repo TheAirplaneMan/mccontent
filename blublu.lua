@@ -33,7 +33,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "mccontent:blublu_pillar",
+	output = "mccontent:blublu_pillar 3",
 	recipe = {
 		{"mccontent:blublu_block"},
 		{"mccontent:blublu_block"},

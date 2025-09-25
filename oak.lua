@@ -78,6 +78,7 @@ minetest.register_node("mccontent:oak_sapling", {
 })
 
 
+
 -- Oak Forest
 
 	minetest.register_biome({
@@ -156,6 +157,21 @@ minetest.register_node("mccontent:oak_sapling", {
 		y_min = 1,
 		schematic = minetest.get_modpath("mccontent") .. "/schematics/emergent_oak_tree.mts",
 		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+
+	minetest.register_decoration({
+		name = "mccontent:oak_tree_small",
+		deco_type = "schematic",
+		place_on = {"default:dirt_with_grass"},
+		sidelen = 80,
+		fill_ratio = 0.00003,
+		biomes = {"grassland"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("mccontent") .. "/schematics/oak_tree_from_sapling.mts",
+		flags = "place_center_x, place_center_z",
+		place_offset_y = -1,
 		rotation = "random",
 	})
 

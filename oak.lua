@@ -150,11 +150,25 @@ minetest.register_node("mccontent:oak_sapling", {
 		deco_type = "schematic",
 		place_on = {"default:dirt_with_grass"},
 		sidelen = 80,
-		fill_ratio = 0.07,
+		fill_ratio = 0.04,
 		biomes = {"oak_forest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("mccontent") .. "/schematics/emergent_oak.mts",
+		schematic = minetest.get_modpath("mccontent") .. "/schematics/emergent_oak_tree.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+
+	minetest.register_decoration({
+		name = "mccontent:oak_tree_with_resin",
+		deco_type = "schematic",
+		place_on = {"default:dirt_with_grass"},
+		sidelen = 80,
+		fill_ratio = 0.02,
+		biomes = {"oak_forest"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("mccontent") .. "/schematics/emergent_oak_tree_with_resin.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
@@ -166,25 +180,6 @@ minetest.register_craft({
 	recipe = {
 		{"mccontent:oak_tree"},
 	}
-})
-
-minetest.register_ore({
-	ore_type        = "blob",
-	ore             = "mccontent:oak_with_resin",
-	wherein         = {"mccontent:oak"},
-	clust_scarcity  = 16 * 16 * 16,
-	clust_size      = 5,
-	y_max           = 31000,
-	y_min           = -31000,
-	noise_threshold = 0.0,
-	noise_params    = {
-		offset = 0.5,
-		scale = 0.2,
-		spread = {x = 5, y = 5, z = 5},
-		seed = 2418,
-		octaves = 1,
-		persist = 0.0
-	},
 })
 
 if minetest.get_modpath("stairs") then

@@ -211,7 +211,7 @@ default.register_fence("mccontent:fence_oak_wood", {
 
 default.register_fence_rail("mccontent:fence_rail_oak_wood", {
 	description = ("Oak Wood Fence Rail"),
-	texture = "mccontent_acacia_wood.png",
+	texture = "mccontent_oak_wood.png",
 	inventory_image = "default_fence_rail_overlay.png^mccontent_oak_wood.png^" ..
 				"default_fence_rail_overlay.png^[makealpha:255,126,126",
 	wield_image = "default_fence_rail_overlay.png^mccontent_oak_wood.png^" ..

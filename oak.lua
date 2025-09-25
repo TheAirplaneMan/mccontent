@@ -192,3 +192,37 @@ if minetest.get_modpath("stairs") then
 		default.node_sound_wood_defaults())
 
 end
+
+
+
+
+
+default.register_fence("mccontent:fence_oak_wood", {
+	description = ("Oak Wood Fence"),
+	texture = "mccontent_oak_wood.png", -- Feelin' lazy, will add an actual texture later
+	inventory_image = "default_fence_overlay.png^mccontent_oak_wood.png^" ..
+				"default_fence_overlay.png^[makealpha:255,126,126",
+	wield_image = "default_fence_overlay.png^mccontent_oak_wood.png^" ..
+				"default_fence_overlay.png^[makealpha:255,126,126",
+	material = "mccontent:oak_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+default.register_fence_rail("mccontent:fence_rail_oak_wood", {
+	description = ("Oak Wood Fence Rail"),
+	texture = "mccontent_acacia_wood.png",
+	inventory_image = "default_fence_rail_overlay.png^mccontent_oak_wood.png^" ..
+				"default_fence_rail_overlay.png^[makealpha:255,126,126",
+	wield_image = "default_fence_rail_overlay.png^mccontent_oak_wood.png^" ..
+				"default_fence_rail_overlay.png^[makealpha:255,126,126",
+	material = "mccontent:oak_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+default.register_mesepost("mccontent:mese_post_light_oak_wood", {
+	description = ("Oak Wood Mese Post Light"),
+	texture = "mccontent_oak_wood.png",
+	material = "mccontent:oak_wood",
+})

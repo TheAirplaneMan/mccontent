@@ -18,6 +18,8 @@ minetest.register_craftitem("mccontent:resin_lump", {
 
 minetest.register_node("mccontent:resin_block", {
 	description = ("Resin Block"),
+	use_texture_alpha = "blend",
+	drawtype = "glasslike",
 	tiles = {"mccontent_resin_block.png"},
 	groups = {cracky = 3, oddly_breakable_by_hand = 1, resin = 1},
 	sounds = default.node_sound_stone_defaults(),
@@ -25,6 +27,8 @@ minetest.register_node("mccontent:resin_block", {
 
 minetest.register_node("mccontent:resin_brick", {
 	description = ("Resin Brick Block"),
+	use_texture_alpha = "blend",
+	drawtype = "glasslike",
 	tiles = {"mccontent_resin_brick_block.png"},
 	groups = {cracky = 3, oddly_breakable_by_hand = 1, resin = 1},
 	sounds = default.node_sound_stone_defaults(),

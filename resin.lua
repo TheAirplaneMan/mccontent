@@ -51,6 +51,15 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craft({
+	output = "default:torch 4",
+	recipe = {
+		{"mccontent:resin_lump"},
+		{"group:stick"},
+	}
+})
+
+
 if core.get_modpath("stairs") then
 
 	stairs.register_stair_and_slab("resin_brick", "mccontent:resin_brick",

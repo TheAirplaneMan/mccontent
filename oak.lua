@@ -168,7 +168,26 @@ minetest.register_craft({
 	}
 })
 
-if core.get_modpath("stairs") then
+minetest.register_ore({
+	ore_type        = "blob",
+	ore             = "mccontent:oak_with_resin",
+	wherein         = {"mccontent:oak"},
+	clust_scarcity  = 16 * 16 * 16,
+	clust_size      = 5,
+	y_max           = 31000,
+	y_min           = -31000,
+	noise_threshold = 0.0,
+	noise_params    = {
+		offset = 0.5,
+		scale = 0.2,
+		spread = {x = 5, y = 5, z = 5},
+		seed = 2418,
+		octaves = 1,
+		persist = 0.0
+	},
+})
+
+if minetest.get_modpath("stairs") then
 
 	stairs.register_stair_and_slab("oak_wood", "mccontent:oak_wood",
 		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},

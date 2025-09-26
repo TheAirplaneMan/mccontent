@@ -26,3 +26,18 @@
 		flags = "place_center_x, place_center_z, force_placement",
 		rotation = "random",
 	})
+
+	minetest.register_decoration({
+		name = "mccontent:desert_well",
+		deco_type = "schematic",
+		place_on = {"default:desert_sand"},
+		sidelen = 80,
+		fill_ratio = 0.000001,
+		biomes = {"desert"},
+		y_max = 31000,
+		y_min = 1,
+		place_offset_y = -1,
+		schematic = minetest.get_modpath("mccontent") .. "/schematics/desert_well.mts",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+	})

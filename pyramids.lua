@@ -9,6 +9,6 @@
 		y_min = 1,
 		schematic = minetest.get_modpath("mccontent") .. "/schematics/sandstone_desert_pyramid.mts",
 		flags = "place_center_x, place_center_z, force_placement",
-		place_offset_y = -6,
+		place_offset_y = -5,
 		rotation = "random",
 	})

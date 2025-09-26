@@ -40,3 +40,20 @@
 		flags = "place_center_x, place_center_z, force_placement",
 		rotation = "random",
 	})
+
+if minetest.get_modpath("chemistry") then
+	minetest.register_decoration({
+		name = "mccontent:alkaline_desert_vault",
+		deco_type = "schematic",
+		place_on = {"chemistry:alkaline_sand"},
+		sidelen = 80,
+		fill_ratio = 0.0001,
+		biomes = {"alkaline_desert"},
+		y_max = 10,
+		y_min = 1,
+		place_offset_y = -7,
+		schematic = minetest.get_modpath("mccontent") .. "/schematics/alkaline_desert_vault.mts",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+	})
+end

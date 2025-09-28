@@ -1,2 +1,1 @@
 mccontent.sandstone_tweaks (Sandstone Visual Tweaks) bool true
-mccontent.enable_pyramids (Enable Pyramids) bool true
